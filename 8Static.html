@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 8Static.html -->
+<html lang="en">
+<head>
+  <title>Static Class Functions</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / Static
+    </div>
+    <h3 id="pageTitle">Static Class Functions</h3>
+    <p>
+      The previous custom functions Display() and Line() were created in the
+      PHP file. They are Global functions.
+    </p>
+    <p>
+      If another PHP file is "included" and it also has a Global Line()
+      function; that function will replace the previous function.
+    </p>
+    <p>
+      The Global functions can be placed inside a Class. This will protect
+      the functions from being replaced. Notice that the Class could also
+      be replaced. That is why Classes should be given names that try to be
+      unique.
+    </p>
+    <pre>
+    // Contains common static functions.
+    class LJCText
+    {
+      // Encode to HTML entities to display HTML.
+      public static function Display(string $text)
+      {
+        $retValue = htmlspecialchars($text);
+        return $retValue;
+      }
+    }</pre>
+    <p>
+      The Line() function will also be added to this Class.
+    </p>
+    <a href="7DefaultParams.html" class="button">&lt;- DefaultParams</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="9UsingStatic.html" class="button">CallingStatic -&gt;</a>
+    <h6>8Static</h6>
+  </div>
+</body>
+</html>
+

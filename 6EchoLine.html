@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 6EchoLine.html -->
+<html lang="en">
+<head>
+  <title>A Line() PHP Function</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / Line
+    </div>
+    <h3 id="pageTitle">A Line() PHP Function</h3>
+    <p>
+      It is inconvenient and distracting to type the "\r\n" characters after
+      every line, especially if there are many lines to be output.
+    </p>
+    <pre>
+    echo("&lt;!DOCTYPE html&gt;\r\n")
+    echo("&lt;html lang=\"en\"&gt;\r\n")
+    echo("&lt;/html&gt;\r\n")</pre>
+    <p>
+      The Line() function can output the text and add those characters.
+    </p>
+    <pre>
+    // Writes the supplied text to the output stream with the new line values.
+    function Line(string $text)
+    {
+      echo($text . "\r\n");
+    }</pre>
+    <p>
+      The output is easier to type and read.
+    </p>
+    <pre>
+    Line("&lt;!DOCTYPE html&gt;")
+    Line("&lt;html lang=\"en\"&gt;")
+    Line("&lt;/html&gt;")</pre>
+    <a href="5Function.html" class="button">&lt;- Display()</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="7DefaultParams.html" class="button">DefaultParams -&gt;</a>
+    <h6>3Echo</h6>
+  </div>
+</body>
+</html>

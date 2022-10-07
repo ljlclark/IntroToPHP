@@ -1,0 +1,45 @@
+/* Intro.css */
+
+body {
+  background: #F0F5FF;
+}
+
+.button {
+  display: inline-block;
+  background: lightsteelblue;
+  border-radius: 3px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+}
+
+.demo {
+  background: lightsteelblue;
+  display: inline-block;
+  overflow: auto;
+  vertical-align: top;
+}
+
+.navigation {
+  background: lightsteelblue;
+}
+
+.page {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.PathText {
+  color: #003399;
+  font-family: Verdana, Tahoma, Arial, Sans-Serif;
+  font-size: 9pt;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.button:hover {
+  background-color: #85C1E9;
+}
+
+#pageTitle {
+  background: lightsteelblue;
+}

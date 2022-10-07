@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 4Echo.html -->
+<html lang="en">
+<head>
+  <title>The "echo" Statement</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / echo
+    </div>
+    <h3 id="pageTitle">The "echo" Statement</h3>
+    <p>
+      The "echo" statement writes to the output stream. It can be written as
+      echo "Some Text"; or echo("SomeText");
+    </p>
+    <p>
+      The output stream is the text that will be sent to the client
+      browser.<br />
+      The output text for the browser is usually HTML.
+    </p>
+    <pre>
+    echo("&lt;!DOCTYPE html&gt;\r\n");
+    echo("&lt;!-- $outputFileName --&gt;\r\n");
+    echo("&lt;html lang=\"en\"&gt;\r\n");
+    echo("&lt;head&gt;\r\n");
+    echo("&lt;/head&gt;\r\n");
+    echo("&lt;body&gt;\r\n");
+    echo("&lt;/body&gt;\r\n");
+    echo("&lt;/html&gt;\r\n");</pre>
+    <p>
+      Notice the escape characters "\r\n". These are the escape characters for
+      a "return" and "new line". This is included so that if the output is sent
+      to a file, it will be easy to read. These characters are ignored by the
+      browser.
+    </p>
+    <p>
+      Also notice the escape character "\"". This is required to output a double
+      quote.
+    </p>
+    <a href="3Strings.html" class="button">&lt;- PHPStrings</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="5Function.html" class="button">Display() -&gt;</a>
+    <h6>4Echo</h6>
+  </div>
+</body>
+</html>

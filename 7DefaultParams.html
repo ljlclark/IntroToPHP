@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 7DefaultParams.html -->
+<html lang="en">
+<head>
+  <title>Default Parameters</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / DefaultParams
+    </div>
+    <h3 id="pageTitle">Default Function Parameters</h3>
+    <p>
+      This is an updated version of the Line() function that uses default
+      parameters. The question mark "?" in front of a parameter data type means
+      that the parameter is allowed to be null or in other words is nullable.
+    </p>
+    <pre>
+    function Line(?string $text = null, ?bool $display = false
+      , ?bool $lastPre = false)
+    {
+      if ($display)
+      {
+        $text = Display($text);
+      }
+      if ($lastPre)
+      {
+        $text = $text . "&lt;/pre&gt;");
+      }
+      echo($text . "\r\n");
+    }</pre>
+    <p>
+      Default parameters can be left blank. If a default parameter is blank, all
+      parameters after that must be blank or specified with a named parameter.
+    </p>
+    <pre>
+    Line(&lt;pre&gt;);
+    Line();
+    Line("&lt;!DOCTYPE html&gt;", true);
+    Line("&lt;html lang=&quot;en&quot;&gt;", true);
+    Line("A line of text.", lastPre: true);</pre>
+    <a href="6EchoLine.html" class="button">&lt;- Line()</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="8Static.html" class="button">Static -&gt;</a>
+    <h6>7DefaultParams</h6>
+  </div>
+</body>
+</html>
+

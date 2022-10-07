@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 5Function.html -->
+<html lang="en">
+<head>
+  <title>A Display() PHP Function</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width =device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / function
+    </div>
+    <h3 id="pageTitle">A Display() PHP Function</h3>
+    <p>
+      HTML entities must be used to display HTML on a page.
+    </p>
+    <pre>
+    echo("&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;\r\n");</pre>
+    <p>
+      It is inconvenient to type the HTML Entities each time they are needed.
+    </p>
+    <p>
+      A PHP function can be created to convert the HTML characters to HTML
+      entities.
+    </p>
+    <pre>
+    // Encode to HTML entities.
+    function Display(string $text)
+    {
+      $retValue = htmlspecialchars($text);
+      return $retValue;
+    }</pre>
+    <p>
+      Now the statements can be written like this:
+    </p>
+    <pre>
+    echo(Display("&lt;html lang=\"en\" html>\r\n"))</pre>
+    <p>
+      There are many ways to encode HTML entities instead of using the
+      htmlspecialchars() function. By putting this in the Display() function
+      instead of calling it directly, it can be changed later without having to
+      change every place it is used.
+    </p>
+    <a href="4Echo.html" class="button">&lt;- Echo</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="6EchoLine.html" class="button">Line() -&gt;</a>
+    <h6>3Echo</h6>
+  </div>
+</body>
+</html>
