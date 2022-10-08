@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 12Head.html -->
+<html lang="en">
+<head>
+  <title>HTMLBegin Output Method</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / HTMLBegin
+    </div>
+    <h3 id="pageTitle">HTMLBegin Output Method</h3>
+    <p>
+      Typing the lines for the beginning of an HTML document every time they are
+      needed or copying and pasting them from another file can be tedius.
+    </p>
+    <p>
+      The HTMLBegin() method can be added to the LJCText Class to make it
+      easier. See the <a href="10External.html">External Page</a>
+    </p>
+    <pre>
+    class LJCText
+    {
+      // Writes the HTML beginning lines.
+      public static function HTMLBegin(string $outputFileName, string $pageTitle)
+      {
+        self::Line("&lt;!DOCTYPE html&gt;");
+        self::Line("&lt;!-- $outputFileName --&gt;");
+        self::Line("&lt;html lang=\"en\"&gt;");
+        self::Line("&lt;head&gt;");
+        self::Line("  &lt;title>$pageTitle&lt;/title&gt;");
+        self::Line("  &lt;meta name=\"author\" content=\"Lester J. Clark\" /&gt;");
+        self::Line("  &lt;meta charset=\"utf-8\" /&gt;");
+        echo("  &lt;meta name=\"viewport\" content=\"width =device-width");
+        self::Line(" initial-scale=1\" /&gt;");
+      }
+    }</pre>
+    <p>
+      Notice how variables can be include in a string. They will be replaced
+      with the variable value.
+    </p>
+    <a href="11ClassMethods.html" class="button">&lt;- ClassMethods</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="13HTMLBody.html" class="button">HTMLBody -&gt;</a>
+    <h6>12HTMLBegin</h6>
+  </div>
+</body>
+</html>
+

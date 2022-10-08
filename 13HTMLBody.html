@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- 13BodyMethod.html -->
+<html lang="en">
+<head>
+  <title>Other HTML Output Methods</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / HTMLBody
+    </div>
+    <h3 id="pageTitle">Other HTML Output Methods</h3>
+    <p>
+    </p>
+    <p>
+      Add these methods to the LJCText Class. See the
+      <a href="10External.html">External Page</a>
+    </p>
+    <pre>
+    // Writes the "head" end and "body" begin elements.
+    public static function HTMLBodyBegin()
+    {
+      self::Line("&lt;/head&gt;");
+      self::Line("&lt;body&gt;");
+    }
+
+    // Writes the HTML ending lines.
+    public static function HTMLEnd()
+    {
+      self::Line("&lt;/body&gt;");
+      self::Line("&lt;/html&gt;");
+    }</pre>
+    <p>
+      Now the code can look like this:
+    </p>
+    <pre>
+    $devPath = "c:/Users/Les/Documents/Visual Studio 2022/WebSitesDev/HTMLTutor";
+    require_once "$devPath/IntroToPHP/PHPCode/LJCTextLib.php";
+
+    LJCText::HTMLBegin("Output.html", "Test Output");
+    // Additional "Head" statements go here.
+    LJCText::HTMLBodyBegin();
+    // Body statements go here.
+    LJCText::HTMLEnd();</pre>
+    <a href="12HTMLBegin.html" class="button">&lt;- HTMLBegin</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="14.html" class="button">14 -&gt;</a>
+    <h6>13HTMLBody</h6>
+  </div>
+</body>
+</html>
+
