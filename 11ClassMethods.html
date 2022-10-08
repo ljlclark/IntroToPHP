@@ -33,8 +33,16 @@
         return $retValue;
       }
 
-      public int SecondNumber;
-    }</pre>
+      private int $FirstNumber;
+      public int $SecondNumber;
+    }
+
+    // Class methods and properties are referenced with the "->" operator.
+    $example = new LJCExample(3);
+    //$example->FirstNumber = 4;  // Cannot access a private property.
+    $example->SecondNumber = 7;
+    $result = $example->Add();
+    // $result = 10</pre>
     <a href="10Include.html" class="button">&lt;- Include</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="12CallingMethods.html" class="button">CallingMethods -&gt;</a>

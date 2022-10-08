@@ -21,6 +21,32 @@
   LJCText::Line("  </div>");
   LJCText::HTMLEnd();
 
+  $example = new LJCExample(3);
+  //$example->FirstNumber = 4;
+  $example->SecondNumber = 7;
+  $result = $example->Add();
+  LJCText::Line($result);
+
+  class LJCExample
+  {
+    // Initializes a class instance with the provided values.
+    public function __construct(int $firstNumber)
+    {
+      $this->FirstNumber = $firstNumber;
+      $this->SecondNumber = 0;
+    }
+
+    // Adds the FirstNumber and SecondNumber.
+    public function Add()
+    {
+      $retValue = $this->FirstNumber + $this->SecondNumber;
+      return $retValue;
+    }
+
+    private int $FirstNumber;
+    public int $SecondNumber;
+  }
+
   // Contains common static functions.
   class LJCText
   {
