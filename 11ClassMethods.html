@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 11ClassMethods.html -->
+<html lang="en">
+<head>
+  <title>Class Methods</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / Static
+    </div>
+    <h3 id="pageTitle">Class Methods</h3>
+    <pre>
+    // Contains Methods.
+    class LJCExample
+    {
+      // Initializes a class instance with the provided values.
+      public function __construct(int $firstNumber)
+      {
+        $this->FirstNumber = $firstNumber;
+        $this->SecondNumber = 0;
+      }
+
+      // Adds the FirstNumber and SecondNumber.
+      public function Add()
+      {
+        $retValue = $this->FirstNumber + $this->SecondNumber;
+        return $retValue;
+      }
+
+      public int SecondNumber;
+    }</pre>
+    <a href="10Include.html" class="button">&lt;- Include</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="12CallingMethods.html" class="button">CallingMethods -&gt;</a>
+    <h6>11ClassMethods</h6>
+  </div>
+</body>
+</html>
+

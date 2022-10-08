@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 10Include.html -->
+<html lang="en">
+<head>
+  <title>External Code</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / External
+    </div>
+    <h3 id="pageTitle">External Code</h3>
+    <p>
+      The LJCText class should be moved to an external file. This allows it to
+      be used by other PHP files.
+    </p>
+    <p>
+      It is useful to name the file with "Lib" to indicate that it may contain
+      more than one class and to prevent it from conflicting with the main
+      internal class.
+    </p>
+    <pre>
+    &lt;?php
+      // LJCTextLib.php
+      public class LJCText
+      {
+        public static function Display(...
+        public static function Line(...
+      }
+    ?&gt;</pre>
+    <p>
+      The "require_once" line is included in the file that wants to use the
+      externally defined classes.
+    </p>
+    <pre>
+    &lt;?php
+      // Example.php
+      // Full path is used to prevent difficulties with relative paths.
+      $devPath = "c:/Users/Les/Documents/Visual Studio 2022/WebSitesDev/HTMLTutor";
+      require_once "$devPath/IntroToPHP/PHPCode/LJCTextLib.php";
+
+      LJCText::Line("This is an output line.");
+    ?&gt;</pre>
+    <a href="9UsingStatic.html" class="button">&lt;- CallingStatic</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="11ClassMethods.html" class="button">ClassMethods -&gt;</a>
+    <h6>10Include</h6>
+  </div>
+</body>
+</html>
+
