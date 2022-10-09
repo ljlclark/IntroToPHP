@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<!-- 1PHP.html -->
+<html lang="en">
+<head>
+  <title>The PHP Interpreter</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
 1. Configure IIS
 
 Control Panel | Programs | Turn Windows features on or off
@@ -82,3 +94,6 @@ Create a file test.php and save it at C:\inetpub\wwwroot.
 Now launch a browser and navigate to
 
 http://localhost/test.php
+  </div>
+</body>
+</html>
