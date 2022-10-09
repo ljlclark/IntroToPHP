@@ -1,4 +1,5 @@
 <?php
+  declare(strict_types=1);
   // Output.php
 
   // 1 Download PHP
@@ -20,6 +21,9 @@
   LJCText::Line("    A line of text.", lastPre: true);
   LJCText::Line("  </div>");
   LJCText::HTMLEnd();
+
+  $x = "What?";
+  $x = 5;
 
   $example = new LJCExample(3);
   //$example->FirstNumber = 4;

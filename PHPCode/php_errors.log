@@ -23,3 +23,10 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php on line 25
+[09-Oct-2022 00:59:34 UTC] PHP Parse error:  syntax error, unexpected variable "$x" in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php on line 24
+[09-Oct-2022 01:00:06 UTC] PHP Parse error:  syntax error, unexpected variable "$x" in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php on line 25
+[09-Oct-2022 01:00:56 UTC] PHP Fatal error:  Uncaught TypeError: LJCText::Line(): Argument #1 ($text) must be of type ?string, int given, called in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php on line 32 and defined in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php:58
+Stack trace:
+#0 C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php(32): LJCText::Line(10)
+#1 {main}
+  thrown in C:\Users\Les\Documents\Visual Studio 2022\WebSitesDev\HTMLTutor\IntroToPHP\PHPCode\1Output.php on line 58
