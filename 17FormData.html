@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 17FormData.html -->
+<html lang="en">
+<head>
+  <title>The Program to Use the Form Data</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / FormData
+    </div>
+    <h3 id="pageTitle">The Program to Use the Form Data</h3>
+    <p>
+      Create the program that will use the submitted form data.
+    </p>
+    <pre>
+    &lt;?php
+      // TestForm.php
+      declare(strict_types=1);
+      require_once "LJCTextLib.php";
+
+      $firstName = Scrub($_POST["firstName"]);
+      $lastName = Scrub($_POST["lastName"]);
+
+      LJCText::HTMLBegin("TestFormOutput.html", "Test Form Output");
+      LJCText::HTMLBodyBegin();
+      echo("Hi $firstName, $lastName");
+      LJCText::HTMLEnd();
+
+      // Returns a scrubbed external value.
+      function Scrub(string $text) : string
+      {
+        $retValue = trim($text);
+        $retValue = stripslashes($retValue);
+        $retValue = htmlspecialchars($retValue);
+        return $retValue;
+      }
+    ?&gt;</pre>
+    <a href="16JavascriptForm.html" class="button">&lt;- Form</a>
+    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--<a href="14.html" class="button">14 -&gt;</a>-->
+    <h6>17FormData</h6>
+  </div>
+</body>
+</html>
+

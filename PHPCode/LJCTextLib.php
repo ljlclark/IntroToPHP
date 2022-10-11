@@ -2,7 +2,7 @@
   // LJCTextLib.php
 
   // Contains common static functions.
-  public class LJCTextLib
+  class LJCText
   {
     // Encode to HTML entities to display HTML.
     public static function Display(string $text)
@@ -49,7 +49,7 @@
       }
       if ($lastPre)
       {
-        $text = $text . "&lt;/pre&gt;");
+        $text = $text . "&lt;/pre&gt;";
       }
       echo($text . "\r\n");
     }

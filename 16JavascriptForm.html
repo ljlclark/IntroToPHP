@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 16JavascriptForm.html -->
+<html lang="en">
+<head>
+  <title>Creating a Javascript Form</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / Form
+    </div>
+    <h3 id="pageTitle">Creating a Javascript Form</h3>
+    <p>
+      A Javascript form collects information to pass to a web server program.
+    </p>
+    <p>
+      The program to receive the information is specified in the "action"
+      attribute of the "form" element.
+    </p>
+    <pre>
+    &lt;form action="TestForm.php" method="post"&gt;
+      &lt;label for="firstName">First Name:&lt;/label&gt;
+      &lt;input type="text" name="firstName" /&gt;&lt;br /&gt;
+      &lt;br /&gt;
+      &lt;label for="lastName">Last Name:&lt;/label&gt;
+      &lt;input type="text" name="lastName" required /&gt;&lt;br /&gt;
+      &lt;br /&gt;
+      &lt;input type="submit" value="Submit" /&gt;
+    &lt;/form&gt;</pre>
+    <p>
+      This form get the First Name and Last Name from the user.
+    </p>
+    <a href="15HTMLBody.html" class="button">&lt;- HTMLBody</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="17FormData.html" class="button">FormData -&gt;</a>
+    <h6>16JavascriptForm</h6>
+  </div>
+</body>
+</html>
+
