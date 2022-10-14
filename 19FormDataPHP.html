@@ -24,9 +24,11 @@
       declare(strict_types=1);
       require_once "LJCTextLib.php";
 
+      // Get the Form data by name.
       $firstName = LJCText::Scrub($_POST["firstName"]);
       $lastName = LJCText::Scrub($_POST["lastName"]);
 
+      // Create the returned HTML.
       LJCText::HTMLBegin("TestFormOutput.html", "Test Form Output");
       LJCText::HTMLBodyBegin();
       echo("Hi $firstName, $lastName");
