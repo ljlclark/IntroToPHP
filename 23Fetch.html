@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 23Fetch.html -->
+<html lang="en">
+<head>
+  <title>Using the Fetch() Method</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / Fetch
+    </div>
+    <h3 id="pageTitle">Using the Fetch() Method</h3>
+    <pre>
+    &lt;!DOCUMENT html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+        Click the left mouse button on the page to update with the WebAPI data.
+        &lt;div id="value"&gt;&lt;/div&gt;
+        &lt;script&gt;
+        document.addEventListener("click", GetData);
+
+        // Get the data without refreshing the page.
+        function GetData()
+        {
+          fetch("http://localhost/ATestForm/TestFetch.php")
+            .then((response) => response.text())
+            .then((data) => HandleData(data));
+            //.then((data) => { value.innerHTML = data; });
+        }
+
+        // Handle the retrieved data.
+        function HandleData(data)
+        {
+          value.innerHTML = data;
+        }
+      &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html;</pre>
+    <a href="22WebAPI.html" class="button">&lt;- WebAPI</a>
+    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--<a href="x.html" class="button">x -&gt;</a>-->
+    <h6>21RestService</h6>
+  </div>
+</body>
+</html>
+
