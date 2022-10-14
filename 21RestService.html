@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 21RestService.html -->
+<html lang="en">
+<head>
+  <title>Retrieving Data with REST</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a href="index.html">Home</a>
+      / REST
+    </div>
+    <h3 id="pageTitle">Retrieving Data with REST</h3>
+    <p>
+      REST stands for "Representational State Transfer". 
+    </p>
+    <p>
+      A PHP program that recieves request values in the URL is acting as a REST
+      Web Service. It can return HTML or other types of data.
+    </p>
+    <pre>
+    &lt;?php
+      // TestWebAPI.php
+	    declare(strict_types=1);
+
+	    $name = Scrub($_GET["name"]);
+	    echo("name: $name");
+
+	    // Returns a scrubbed external value.
+	    function Scrub(string $text) : string
+	    {
+		    $retValue = trim($text);
+		    $retValue = stripslashes($retValue);
+		    $retValue = htmlspecialchars($retValue);
+		    return $retValue;
+	    }
+    ?&gt;</pre>
+    <a href="20EnteringData.html" class="button">&lt;- EnteringData</a>
+    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--<a href="14.html" class="button">14 -&gt;</a>-->
+    <h6>21RestService</h6>
+  </div>
+</body>
+</html>
+

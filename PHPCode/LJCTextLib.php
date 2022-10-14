@@ -53,5 +53,14 @@
       }
       echo($text . "\r\n");
     }
+
+	  // Returns a scrubbed external value.
+	  public static function Scrub(string $text) : string
+	  {
+		  $retValue = trim($text);
+		  $retValue = stripslashes($retValue);
+		  $retValue = htmlspecialchars($retValue);
+		  return $retValue;
+	  }
   }
 ?>
