@@ -19,25 +19,17 @@
       REST stands for "Representational State Transfer". 
     </p>
     <p>
-      A PHP program that recieves request values in the URL is acting as a REST
+      A PHP program that receives request values in the URL is acting as a REST
       Web Service. It can return HTML or other types of data.
     </p>
     <pre>
     &lt;?php
-      // TestWebAPI.php
-	    declare(strict_types=1);
+      // TestRest.php
+      declare(strict_types=1);
+      require_once "LJCTextLib.php";
 
-	    $name = Scrub($_GET["name"]);
-	    echo("name: $name");
-
-	    // Returns a scrubbed external value.
-	    function Scrub(string $text) : string
-	    {
-		    $retValue = trim($text);
-		    $retValue = stripslashes($retValue);
-		    $retValue = htmlspecialchars($retValue);
-		    return $retValue;
-	    }
+      $name = LJCText::Scrub($_GET["name"]);
+      echo("name: $name");
     ?&gt;</pre>
     <a href="20EnteringData.html" class="button">&lt;- EnteringData</a>
     <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->

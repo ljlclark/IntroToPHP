@@ -1,0 +1,24 @@
+<!DOCUMENT html>
+<html>
+<body>
+  <div id="value"></div>
+  <script>
+    document.addEventListener("click", GetData);
+
+    // Get the data without refreshing the page.
+    function GetData()
+    {
+      fetch("http://localhost/ATestForm/TestFetch.php")
+        .then((response) => response.text())
+        .then((data) => HandleData(data));
+        //.then((data) => { value.innerHTML = data; });
+    }
+
+    // Handle the retrieved data.
+    function HandleData(data)
+    {
+      value.innerHTML = data;
+    }
+  </script>
+</body>
+</html>
