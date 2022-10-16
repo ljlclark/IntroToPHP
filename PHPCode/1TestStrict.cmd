@@ -1,0 +1,1 @@
+php 1TestStrict.php > 1TestStrict.html
