@@ -29,21 +29,12 @@
       type value to the existing variable.<br />
       $text = 5; // The data type changes to "integer".
     </p>
-    <p>
-      Changing the data type of an existing variable can cause confusion and
-      lead to program errors that are hard to find.
-    </p>
-    <p>
-      The strict declaration causes an attempted change of data type to display
-      an error.
-    </p>
     <pre>
     &lt;?php
       // PHPFile.php
-      declare(strict_types=1);
 
       $text = "Some text.";
-      $text = 5;  // This will display an error.
+      $text = 5;
     ?&gt;</pre>
     <a href="2PHPFile.html" class="button">&lt;- PHPFile</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
