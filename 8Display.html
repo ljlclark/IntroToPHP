@@ -26,12 +26,12 @@
       are needed.
     </p>
     <p>
-      A PHP function can be created to convert the HTML characters to HTML
-      entities.
+      A <a href="MoreFunction.html">PHP function</a> can be created to convert
+      the HTML characters to HTML entities.
     </p>
     <pre>
     // Encode to HTML entities.
-    function Display(string $text)
+    function Display(string $text) : string
     {
       $retValue = htmlspecialchars($text);
       return $retValue;

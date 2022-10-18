@@ -31,7 +31,7 @@
         document.addEventListener("click", GetData);
 
         // Get the data without refreshing the page.
-        function GetData()
+        function GetData() : string
         {
           fetch("http://localhost/ATestForm/TestFetch.php")
             .then((response) => response.text())
