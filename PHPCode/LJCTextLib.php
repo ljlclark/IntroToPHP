@@ -5,7 +5,7 @@
   class LJCText
   {
     // Encode to HTML entities to display HTML.
-    public static function Display(string $text)
+    public static function Display(string $text) : string
     {
       $retValue = htmlspecialchars($text);
       return $retValue;
