@@ -22,12 +22,12 @@
       that the parameter is allowed to be null or in other words is nullable.
     </p>
     <pre>
-    function Line(?string $text = null, ?bool $display = false
+    function Line(?string $text = null, ?bool $encode = false
       , ?bool $lastPre = false)
     {
-      if ($display)
+      if ($encode)
       {
-        $text = Display($text);
+        $text = Encode($text);
       }
       if ($lastPre)
       {

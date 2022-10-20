@@ -1,8 +1,8 @@
 <?php
-  // LJCTextLib.php
+  // LJCHTMLLib.php
 
   // Contains common static functions.
-  class LJCText
+  class LJCHTML
   {
     // Encode to HTML entities to display HTML.
     public static function Display(string $text) : string

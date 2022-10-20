@@ -23,17 +23,17 @@
     &lt;?php
       // TestForm.php
       declare(strict_types=1);
-      require_once "LJCTextLib.php";
+      require_once "LJCHTMLLib.php";
 
       // Get the Form data by name.
-      $firstName = LJCText::Scrub($_POST["firstName"]);
-      $lastName = LJCText::Scrub($_POST["lastName"]);
+      $firstName = LJCHTML::Scrub($_POST["firstName"]);
+      $lastName = LJCHTML::Scrub($_POST["lastName"]);
 
       // Create the returned HTML.
-      LJCText::HTMLBegin("TestFormOutput.html", "Test Form Output");
-      LJCText::HTMLBodyBegin();
+      LJCHTML::HTMLBegin("TestFormOutput.html", "Test Form Output");
+      LJCHTML::HTMLBodyBegin();
       echo("Hi $firstName, $lastName");
-      LJCText::HTMLEnd();
+      LJCHTML::HTMLEnd();
     ?&gt;</pre>
     <a href="18Form.html" class="button">&lt;- Form</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

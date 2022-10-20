@@ -27,10 +27,10 @@
     &lt;?php
       // TestRest.php
       declare(strict_types=1);
-      require_once "LJCTextLib.php";
+      require_once "LJCHTMLLib.php";
 
       // Get values from the URL.
-      $name = LJCText::Scrub($_GET["name"]);
+      $name = LJCHTML::Scrub($_GET["name"]);
 
       // Return the data.
       echo("name: $name");

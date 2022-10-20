@@ -26,19 +26,19 @@
       from another function in the Class.
     </p>
     <pre>
-    <b>LJCText::</b>Line("Output this line.");
+    <b>LJCHTML::</b>Line("Output this line.");
 
     // Contains common static functions.
-    class LJCText
+    class LJCHTML
     {
-      public static function Display( ...
+      public static function Encode( ...
 
-      public static function Line(?string $text = null, ?bool $display = false
+      public static function Line(?string $text = null, ?bool $encode = false
         , ?bool $lastPre = false)
       {
-        if ($display)
+        if ($encode)
         {
-          $text = <b>self::</b>Display($text);
+          $text = <b>self::</b>Encode($text);
         }
         ... (Indicates there is more text that has been left out)
       }

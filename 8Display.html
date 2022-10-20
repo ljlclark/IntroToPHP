@@ -2,7 +2,7 @@
 <!-- 8Display.html -->
 <html lang="en">
 <head>
-  <title>A Display() PHP Function</title>
+  <title>An Encode() PHP Function</title>
   <meta name="author" content="Lester J. Clark" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width =device-width initial-scale=1" />
@@ -13,9 +13,9 @@
   <div class="page">
     <div class="PathText">
       / <a id="home" href="index.html">Home</a>
-      / Display
+      / Encode
     </div>
-    <h3 id="pageTitle">A Display() PHP Function</h3>
+    <h3 id="pageTitle">An Encode() PHP Function</h3>
     <p>
       HTML entities must be used to display HTML characters on a page.
     </p>
@@ -31,7 +31,7 @@
     </p>
     <pre>
     // Encode to HTML entities.
-    function Display(string $text) : string
+    function Encode(string $text) : string
     {
       $retValue = htmlspecialchars($text);
       return $retValue;
@@ -40,10 +40,10 @@
       Now the statements can be written like this:
     </p>
     <pre>
-    echo(Display("&lt;html lang=\"en\" html>\r\n"))</pre>
+    echo(Encode("&lt;html lang=\"en\" html>\r\n"))</pre>
     <p>
       There are several ways to encode HTML entities instead of using the
-      htmlspecialchars() function. By putting this in the Display() function
+      htmlspecialchars() function. By putting this in the Encode() function
       instead of calling it directly, it can be changed later without having to
       change every place it is used.
     </p>

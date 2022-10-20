@@ -1,8 +1,8 @@
 <?php
   // TestWebAPI.php
   declare(strict_types=1);
-  require_once "LJCTextLib.php";
+  require_once "LJCHTMLLib.php";
 
-  $name = LJCText::Scrub($_GET["name"]);
+  $name = LJCHTML::Scrub($_GET["name"]);
   echo("name: $name");
 ?>
