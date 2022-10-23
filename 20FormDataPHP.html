@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 19FormDataPHP.html -->
+<!-- 20FormDataPHP.html -->
 <html lang="en">
 <head>
   <title>The Program to Use the Form Data</title>
@@ -21,24 +21,24 @@
     </p>
     <pre>
     &lt;?php
-      // TestForm.php
-      declare(strict_types=1);
-      require_once "LJCHTMLLib.php";
+    // TestForm.php
+    declare(strict_types=1);
+    require_once "LJCHTMLLib.php";
 
-      // Get the Form data by name.
-      $firstName = LJCHTML::Scrub($_POST["firstName"]);
-      $lastName = LJCHTML::Scrub($_POST["lastName"]);
+    // Get the Form data by name.
+    $firstName = LJCHTML::Scrub($_POST["firstName"]);
+    $lastName = LJCHTML::Scrub($_POST["lastName"]);
 
-      // Create the returned HTML.
-      LJCHTML::HTMLBegin("TestFormOutput.html", "Test Form Output");
-      LJCHTML::HTMLBodyBegin();
-      echo("Hi $firstName, $lastName");
-      LJCHTML::HTMLEnd();
+    // Create the returned HTML.
+    LJCHTML::HTMLBegin("TestFormOutput.html", "Test Form Output");
+    LJCHTML::HTMLBodyBegin();
+    echo("Hi $firstName, $lastName");
+    LJCHTML::HTMLEnd();
     ?&gt;</pre>
-    <a href="18Form.html" class="button">&lt;- Form</a>
+    <a href="19Scrub.html" class="button">&lt;- Scrub</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="20EnteringData.html" class="button">EnteringData -&gt;</a>
-    <h6>19FormDataPHP</h6>
+    <a href="21EnteringData.html" class="button">EnteringData -&gt;</a>
+    <h6>20FormDataPHP</h6>
   </div>
   <script>
     LJCIsLocal();

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 19Scrub.html -->
+<html lang="en">
+<head>
+  <title>The Scrub Method</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+  <script src="Intro.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      / <a id="home" href="index.html">Home</a>
+      / FormData
+    </div>
+    <h3 id="pageTitle">The Scrub Method</h3>
+    <p>
+      Any data received by a server program should be cleaned to prevent harm to
+      the program, data or computer. This process is sometimes called
+      scrubbing.
+    </p>
+    <p>
+      Add the Scrub function to the LJCHTML class in LJCHTMLLib.php.
+    </p>
+    <pre>
+    // Returns a scrubbed external value.
+    public static function Scrub(string $text) : string
+    {
+      $retValue = trim($text);
+      $retValue = stripslashes($retValue);
+      $retValue = htmlspecialchars($retValue);
+      return $retValue;
+    }</pre>
+    <a href="18Form.html" class="button">&lt;- Form</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="20FormDataPHP.html" class="button">FormData -&gt;</a>
+    <h6>19Scrub</h6>
+  </div>
+  <script>
+    LJCIsLocal();
+  </script>
+</body>
+</html>
+
