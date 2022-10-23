@@ -22,14 +22,14 @@
     </p>
     <pre>
     // Writes the "head" end and "body" begin elements.
-    public static function HTMLBodyBegin()
+    public static function BodyBegin()
     {
       self::Line("&lt;/head&gt;");
       self::Line("&lt;body&gt;");
     }
 
     // Writes the HTML ending lines.
-    public static function HTMLEnd()
+    public static function End()
     {
       self::Line("&lt;/body&gt;");
       self::Line("&lt;/html&gt;");
@@ -41,11 +41,11 @@
     $devPath = "c:/Users/Les/Documents/Visual Studio 2022/WebSitesDev/HTMLTutor";
     require_once "$devPath/IntroToPHP/PHPCode/LJCHTMLLib.php";
 
-    LJCHTML::HTMLBegin("Output.html", "Test Output");
+    LJCHTML::Begin("Output.html", "Test Output");
     // Additional "Head" statements go here.
-    LJCHTML::HTMLBodyBegin();
+    LJCHTML::BodyBegin();
     // Body statements go here.
-    LJCHTML::HTMLEnd();</pre>
+    LJCHTML::End();</pre>
     <a href="15HTMLBegin.html" class="button">&lt;- HTMLBegin</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="17FormHTML.html" class="button">TestForm -&gt;</a>

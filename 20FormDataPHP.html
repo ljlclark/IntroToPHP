@@ -30,10 +30,10 @@
     $lastName = LJCHTML::Scrub($_POST["lastName"]);
 
     // Create the returned HTML.
-    LJCHTML::HTMLBegin("TestFormOutput.html", "Test Form Output");
-    LJCHTML::HTMLBodyBegin();
+    LJCHTML::Begin("TestFormOutput.html", "Test Form Output");
+    LJCHTML::BodyBegin();
     echo("Hi $firstName, $lastName");
-    LJCHTML::HTMLEnd();
+    LJCHTML::End();
     ?&gt;</pre>
     <a href="19Scrub.html" class="button">&lt;- Scrub</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
