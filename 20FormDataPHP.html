@@ -21,19 +21,19 @@
     </p>
     <pre>
     &lt;?php
-    // TestForm.php
-    declare(strict_types=1);
-    require_once "LJCHTMLLib.php";
+      // TestForm.php
+      declare(strict_types=1);
+      require_once "LJCHTMLLib.php";
 
-    // Get the Form data by name.
-    $firstName = LJCHTML::Scrub($_POST["firstName"]);
-    $lastName = LJCHTML::Scrub($_POST["lastName"]);
+      // Get the Form data by name.
+      $firstName = LJCHTML::Scrub($_POST["firstName"]);
+      $lastName = LJCHTML::Scrub($_POST["lastName"]);
 
-    // Create the returned HTML.
-    LJCHTML::Begin("TestFormOutput.html", "Test Form Output");
-    LJCHTML::BodyBegin();
-    echo("Hi $firstName, $lastName");
-    LJCHTML::End();
+      // Create the returned HTML.
+      LJCHTML::Begin("TestFormOutput.html", "Test Form Output");
+      LJCHTML::BodyBegin();
+      echo("Hi $firstName, $lastName");
+      LJCHTML::End();
     ?&gt;</pre>
     <a href="19Scrub.html" class="button">&lt;- Scrub</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
