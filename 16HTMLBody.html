@@ -12,7 +12,7 @@
 <body>
   <div class="page">
     <div class="PathText">
-      / <a id="home" href="index.html">Home</a>
+      PHP: / <a id="home" href="index.html">Home</a>
       / HTMLBody
     </div>
     <h3 id="pageTitle">Other HTML Output Methods</h3>
@@ -38,8 +38,9 @@
       Now the code can look like this:
     </p>
     <pre>
-    $devPath = "c:/Users/Les/Documents/Visual Studio 2022/WebSitesDev/HTMLTutor";
-    require_once "$devPath/IntroToPHP/PHPCode/LJCHTMLLib.php";
+    $rootPath = "c:/Users/Les/Documents/Visual Studio 2022";
+    $devPath = "$rootPath/WebSitesDev/HTMLTutor/IntroToPHP";
+    <b>require_once</b> "$devPath/PHPCode/LJCHTMLLib.php";
 
     LJCHTML::Begin("Output.html", "Test Output");
     // Additional "Head" statements go here.
