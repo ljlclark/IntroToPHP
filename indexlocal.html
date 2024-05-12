@@ -1,64 +1,144 @@
 <!DOCTYPE html>
 <!-- Copyright(c) Lester J. Clark and Contributors. -->
 <!-- Licensed under the MIT License.-->
-<!-- IntroToPHP/indexLocal.html -->
+<!-- IntroToPHP/index.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Intro to PHP Tutorial</title>
-  <meta name='author' content='Lester J. Clark' />
   <meta charset='utf-8' />
+  <meta name="keywords" content="LJC, PHP, Tutorial, Simple">
+  <meta name='author' content='Lester J. Clark' />
   <meta name='viewport' content='width=device-width initial-scale=1' />
-  <link rel='stylesheet' type='text/css' href='Intro.css' />
-  <style>
-    .picture {
-      background: #1798B7;
-      height: auto;
-      max-width: 100%;
-    }
-  </style>
+  <link rel='stylesheet' type='text/css' href='CSS\Intro.css' />
+  <link rel="stylesheet" type="text/css" href="CSS\Sidebar.css" />
+  <script src="Script\NavEvents.js"></script>
 </head>
 <body>
-  <div class="page">
-    <img src="../finaltransparent.png" class="picture" />
-    <h3 id="pageTitle" style="text-align: center">Intro to PHP Tutorial</h3>
-    <p style="text-align: center">
-      <a href="1PHP.html">PHP</a><br />
-      <a href="2PHPFile.html">The PHP Code File</a><br />
-      <a href="3Variables.html">PHP Variables</a><br />
-      <a href="4Strings.html">PHP Strings</a><br />
-      <a href="5CommandLine.html">Run a Program From the Command Line</a><br />
-      <a href="6Echo.html">The "echo" Statement</a><br />
-      <a href="7EchoCmd.html">The TestEcho Command File</a><br />
-      <a href="8Display.html">A Display() PHP Function</a><br />
-      <a href="9EchoLine.html">A Line() PHP Function</a><br />
-      <a href="10DefaultParams.html">Default Parameters</a><br />
-      <a href="11Static.html">Static Class Functions</a><br />
-      <a href="12UsingStatic.html">Calling Static Class Functions</a><br />
-      <a href="13External.html">External Code</a><br />
-      <a href="14ClassMethods.html">Class Methods</a><br />
-      <a href="15HTMLBegin.html">HTML Begin Output Method</a><br />
-      <a href="16HTMLBody.html">Other HTML Output Methods</a><br />
-      <a href="17FormHTML.html">The the TestForm HTML File</a><br />
-      <a href="18Form.html">Creating an HTML Form</a><br />
-      <a href="19Scrub.html">Cleaning the Data</a><br />
-      <a href="20FormDataPHP.html">Program to Use the Form Data</a><br />
-      <a href="21EnteringData.html">Entering the Form Data</a><br />
-      <a href="22RestService.html">Retrieving Data with REST</a><br />
-      <a href="23UsingRest.html">Using the REST Web Service</a><br />
-      <a href="24WebAPI.html">A Very Simple WebAPI</a><br />
-      <a href="25Fetch.html">Calling the Fetch() Method</a><br />
-      <a href="26UsingFetch.html">Using the WebAPI with Fetch</a><br />
-    </p>
-    <h3 style="background: lightsteelblue; text-align: center">Other Simple and Brief Tutorials</h3>
-    <p style="text-align: center">
-      <a href="../IntroToHTML/WebSite/indexLocal.html">Intro to HTML5 Tutorial</a><br />
-      <a href="../IntroToCSS/indexLocal.html">Intro to CSS Tutorial</a><br />
-      <a href="../IntroToJavascript/indexLocal.html">Intro to Javascript Tutorial</a><br />
-    </p>
-    <h6>indexlocal</h6>
+  <!-- Show/Hide Menu Icon -->
+  <span id="menubar"><img id="menuIco" src="AppManager.ico" /></span>
+  <div id="sidebar">
+    <br />
+    <div class="navItem" data-href="PHPMain.html">
+      Home
+    </div>
+    <div class="navItem"
+         data-href="HTML\1PHP.html">
+      PHP
+    </div>
+    <div class="navItem"
+         data-href="HTML\2PHPFile.html">
+      The PHP Code File
+    </div>
+    <div class="navItem"
+         data-href="HTML\3Variables.html">
+      PHP Variables
+    </div>
+    <div class="navItem"
+         data-href="HTML\4Strings.html">
+      PHP Strings
+    </div>
+    <div class="navItem"
+         data-href="HTML\5CommandLine.html">
+      Run a Program From the Command Line
+    </div>
+    <div class="navItem"
+         data-href="HTML\6Echo.html">
+      The "echo" Statement
+    </div>
+    <div class="navItem"
+         data-href="HTML\7EchoCmd.html">
+      The TestEcho Command File
+    </div>
+    <div class="navItem"
+         data-href="HTML\8Display.html">
+      A Display() PHP Function
+    </div>
+    <div class="navItem"
+         data-href="HTML\9EchoLine.html">
+      A Line() PHP Function
+    </div>
+    <div class="navItem"
+         data-href="HTML\10DefaultParams.html">
+      Default Parameters
+    </div>
+    <div class="navItem"
+         data-href="HTML\11Static.html">
+      Static Class Functions
+    </div>
+    <div class="navItem"
+         data-href="HTML\12UsingStatic.html">
+      Calling Static Class Functions
+    </div>
+    <div class="navItem"
+         data-href="HTML\13External.html">
+      External Code
+    </div>
+    <div class="navItem"
+         data-href="HTML\14ClassMethods.html">
+      Class Methods
+    </div>
+    <div class="navItem"
+         data-href="HTML\15HTMLBegin.html">
+      HTML Begin Output Method
+    </div>
+    <div class="navItem"
+         data-href="HTML\16HTMLBody.html">
+      Other HTML Output Methods
+    </div>
+    <div class="navItem"
+         data-href="HTML\17FormHTML.html">
+      The the TestForm HTML File
+    </div>
+    <div class="navItem"
+         data-href="HTML\18Form.html">
+      Creating an HTML Form
+    </div>
+    <div class="navItem"
+         data-href="HTML\19Scrub.html">
+      Cleaning the Data
+    </div>
+    <div class="navItem"
+         data-href="HTML\20FormDataPHP.html">
+      Program to Use the Form Data
+    </div>
+    <div class="navItem"
+         data-href="HTML\21EnteringData.html">
+      Entering the Form Data
+    </div>
+    <div class="navItem"
+         data-href="HTML\22RestService.html">
+      Retrieving Data with REST
+    </div>
+    <div class="navItem"
+         data-href="HTML\23UsingRest.html">
+      Using the REST Web Service
+    </div>
+    <div class="navItem"
+         data-href="HTML\24WebAPI.html">
+      A Very Simple WebAPI
+    </div>
+    <div class="navItem"
+         data-href="HTML\25Fetch.html">
+      Calling the Fetch() Method
+    </div>
+    <div class="navItem"
+         data-href="HTML\26UsingFetch.html">
+      Using the WebAPI with Fetch
+    </div>
+    <br />
+    <div class="smallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+  <div id="content">
+    <iframe id="contentFrame" src="PHPMain.html"></iframe>
   </div>
   <script>
     localStorage.setItem("isLocal", "local");
+    const contentFrame = document.getElementById("contentFrame");
+    const navEvents = new NavEvents(contentFrame);
+    navEvents.AddEvents();
   </script>
 </body>
 </html>

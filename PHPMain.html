@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Copyright(c) Lester J. Clark and Contributors. -->
 <!-- Licensed under the MIT License.-->
-<!-- IntroToPHP/index.html -->
+<!-- IntroToPHP/PHPMain.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Intro to PHP Tutorial</title>
@@ -9,67 +9,94 @@
   <meta name="keywords" content="LJC, PHP, Tutorial, Simple">
   <meta name='author' content='Lester J. Clark' />
   <meta name='viewport' content='width=device-width initial-scale=1' />
-  <link rel='stylesheet' type='text/css' href='CSS\Intro.css' />
+  <link rel='stylesheet' type='text/css' href='CSS/Intro.css' />
   <style>
     .banner {
       background: #1798B7;
       height: 60px;
       text-align: center;
     }
+
+    .picture {
+      background: #1798B7;
+      height: auto;
+      max-width: 100%;
+    }
   </style>
   <script>
-    function HREF(url)
+    function HREF(wwwURL, localURL)
     {
+      const isLocal = localStorage.getItem("isLocal");
+      let url = wwwURL;
+      if (isLocal)
+      {
+        url = localURL
+      }
       parent.parent.location.href = url;
     }
   </script>
 </head>
 <body>
   <div class="page">
-    <h3 class="banner"><br />Simple and Brief</h3>
+    <img id="ZNNHS" src="../finaltransparent.png"
+         class="picture" />
+    <h3 id="Banner" class="banner"><br />Simple and Brief</h3>
     <h3 id="pageTitle" style="text-align: center">Intro to PHP Tutorial</h3>
     <p style="text-align: center">
-      <a href="HTML\1PHP.html">PHP</a><br />
-      <a href="HTML\2PHPFile.html">The PHP Code File</a><br />
-      <a href="HTML\3Variables.html">PHP Variables</a><br />
-      <a href="HTML\4Strings.html">PHP Strings</a><br />
-      <a href="HTML\5CommandLine.html">Run a Program From the Command Line</a><br />
-      <a href="HTML\6Echo.html">The "echo" Statement</a><br />
-      <a href="HTML\7EchoCmd.html">The TestEcho Command File</a><br />
-      <a href="HTML\8Display.html">A Display() PHP Function</a><br />
-      <a href="HTML\9EchoLine.html">A Line() PHP Function</a><br />
-      <a href="HTML\10DefaultParams.html">Default Parameters</a><br />
-      <a href="HTML\11Static.html">Static Class Functions</a><br />
-      <a href="HTML\12UsingStatic.html">Calling Static Class Functions</a><br />
-      <a href="HTML\13External.html">External Code</a><br />
-      <a href="HTML\14ClassMethods.html">Class Methods</a><br />
-      <a href="HTML\15HTMLBegin.html">HTML Begin Output Method</a><br />
-      <a href="HTML\16HTMLBody.html">Other HTML Output Methods</a><br />
-      <a href="HTML\17FormHTML.html">The the TestForm HTML File</a><br />
-      <a href="HTML\18Form.html">Creating an HTML Form</a><br />
-      <a href="HTML\19Scrub.html">Cleaning the Data</a><br />
-      <a href="HTML\20FormDataPHP.html">Program to Use the Form Data</a><br />
-      <a href="HTML\21EnteringData.html">Entering the Form Data</a><br />
-      <a href="HTML\22RestService.html">Retrieving Data with REST</a><br />
-      <a href="HTML\23UsingRest.html">Using the REST Web Service</a><br />
-      <a href="HTML\24WebAPI.html">A Very Simple WebAPI</a><br />
-      <a href="HTML\25Fetch.html">Calling the Fetch() Method</a><br />
-      <a href="HTML\26UsingFetch.html">Using the WebAPI with Fetch</a><br />
+      <a href="HTML/1PHP.html">PHP</a><br />
+      <a href="HTML/2PHPFile.html">The PHP Code File</a><br />
+      <a href="HTML/3Variables.html">PHP Variables</a><br />
+      <a href="HTML/4Strings.html">PHP Strings</a><br />
+      <a href="HTML/5CommandLine.html">Run a Program From the Command Line</a><br />
+      <a href="HTML/6Echo.html">The "echo" Statement</a><br />
+      <a href="HTML/7EchoCmd.html">The TestEcho Command File</a><br />
+      <a href="HTML/8Display.html">A Display() PHP Function</a><br />
+      <a href="HTML/9EchoLine.html">A Line() PHP Function</a><br />
+      <a href="HTML/10DefaultParams.html">Default Parameters</a><br />
+      <a href="HTML/11Static.html">Static Class Functions</a><br />
+      <a href="HTML/12UsingStatic.html">Calling Static Class Functions</a><br />
+      <a href="HTML/13External.html">External Code</a><br />
+      <a href="HTML/14ClassMethods.html">Class Methods</a><br />
+      <a href="HTML/15HTMLBegin.html">HTML Begin Output Method</a><br />
+      <a href="HTML/16HTMLBody.html">Other HTML Output Methods</a><br />
+      <a href="HTML/17FormHTML.html">The the TestForm HTML File</a><br />
+      <a href="HTML/18Form.html">Creating an HTML Form</a><br />
+      <a href="HTML/19Scrub.html">Cleaning the Data</a><br />
+      <a href="HTML/20FormDataPHP.html">Program to Use the Form Data</a><br />
+      <a href="HTML/21EnteringData.html">Entering the Form Data</a><br />
+      <a href="HTML/22RestService.html">Retrieving Data with REST</a><br />
+      <a href="HTML/23UsingRest.html">Using the REST Web Service</a><br />
+      <a href="HTML/24WebAPI.html">A Very Simple WebAPI</a><br />
+      <a href="HTML/25Fetch.html">Calling the Fetch() Method</a><br />
+      <a href="HTML/26UsingFetch.html">Using the WebAPI with Fetch</a><br />
     </p>
     <h3 style="background: lightsteelblue; text-align: center">Other Simple and Brief Tutorials</h3>
-    <div style="text-align: center"
-         onclick="HREF('https://ljlclark.github.io/IntroToHTML/')">
-      Intro to HTML5 Tutorial
-    </div>
-    <div style="text-align: center"
-         onclick="HREF('https://ljlclark.github.io/IntroToCSS/')">
-      Intro to CSS Tutorial
-    </div>
-    <div style="text-align: center"
-         onclick="HREF('https://ljlclark.github.io/IntroToJavascript/')">
-      Intro to Javascript Tutorial
-    </div>
-    <h6>index</h6>
+    <p style="text-align: center">
+      <span onclick="HREF('https://ljlclark.github.io/IntroToHTML/'
+              , '../IntroToHTML/WebSite/indexLocal.html')">
+        Intro to HTML5 Tutorial
+      </span><br />
+      <span onclick="HREF('https://ljlclark.github.io/IntroToCSS/'
+              ,'../IntroToCSS/indexLocal.html')">
+        Intro to CSS Tutorial
+      </span><br />
+      <span onclick="HREF('https://ljlclark.github.io/IntroToJavascript/'
+              , '../IntroToJavascript/indexLocal.html')">
+        Intro to Javascript Tutorial
+      </span><br />
+    </p>
+    <h6>PHPMain</h6>
   </div>
+  <script>
+    const isLocal = localStorage.getItem("isLocal");
+    if (isLocal)
+    {
+      Banner.style.display = "none";
+    }
+    else
+    {
+      ZNNHS.style.display = "none";
+    }
+  </script>
 </body>
 </html>
