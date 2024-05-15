@@ -136,6 +136,7 @@
     <iframe id="contentFrame" src="PHPMain.html"></iframe>
   </div>
   <script>
+    localStorage.removeItem("isLocal");
     const contentFrame = document.getElementById("contentFrame");
     const navEvents = new NavEvents(contentFrame);
     navEvents.AddEvents();
