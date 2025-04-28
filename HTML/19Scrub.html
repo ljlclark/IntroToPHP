@@ -40,6 +40,15 @@
     <a href="20FormDataPHP.html" class="button">FormData -&gt;</a>
     <h6>19Scrub</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("cleaning", origin);
+    });
+  </script>
 </body>
 </html>
 

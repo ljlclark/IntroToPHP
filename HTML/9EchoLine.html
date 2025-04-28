@@ -48,5 +48,14 @@
     <a href="10DefaultParams.html" class="button">DefaultParams -&gt;</a>
     <h6>9EchoLine</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("line", origin);
+    });
+  </script>
 </body>
 </html>

@@ -53,6 +53,15 @@
     <a href="11Static.html" class="button">Static -&gt;</a>
     <h6>10DefaultParams</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("default", origin);
+    });
+  </script>
 </body>
 </html>
 

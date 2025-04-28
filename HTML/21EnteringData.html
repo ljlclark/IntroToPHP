@@ -54,6 +54,15 @@
     <a href="22RestService.html" class="button">REST -&gt;</a>
     <h6>21EnteringData</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("enterData", origin);
+    });
+  </script>
 </body>
 </html>
 

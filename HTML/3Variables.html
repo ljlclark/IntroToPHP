@@ -52,5 +52,14 @@
     <a href="4Strings.html" class="button">Strings -&gt;</a>
     <h6>3Variables</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("vars", origin);
+    });
+  </script>
 </body>
 </html>

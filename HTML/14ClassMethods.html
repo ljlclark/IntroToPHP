@@ -51,6 +51,15 @@
     <a href="15HTMLBegin.html" class="button">HTMLBegin -&gt;</a>
     <h6>14ClassMethods</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("class", origin);
+    });
+  </script>
 </body>
 </html>
 

@@ -49,6 +49,15 @@
     <a href="12UsingStatic.html" class="button">CallingStatic -&gt;</a>
     <h6>11Static</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("static", origin);
+    });
+  </script>
 </body>
 </html>
 

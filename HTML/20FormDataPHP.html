@@ -42,6 +42,15 @@
     <a href="21EnteringData.html" class="button">EnteringData -&gt;</a>
     <h6>20FormDataPHP</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("useForm", origin);
+    });
+  </script>
 </body>
 </html>
 

@@ -54,6 +54,15 @@
     <a href="26UsingFetch.html" class="button">UsingFetch -&gt;</a>
     <h6>25Fetch</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("fetch", origin);
+    });
+  </script>
 </body>
 </html>
 

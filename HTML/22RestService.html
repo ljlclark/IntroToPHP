@@ -42,6 +42,15 @@
     <a href="23UsingRest.html" class="button">UsingRest -&gt;</a>
     <h6>22RestService</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("retrieveRest", origin);
+    });
+  </script>
 </body>
 </html>
 

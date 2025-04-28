@@ -40,5 +40,14 @@
     <a href="5CommandLine.html" class="button">CommandLine -&gt;</a>
     <h6>4Strings</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("strings", origin);
+    });
+  </script>
 </body>
 </html>

@@ -50,6 +50,15 @@
     <a href="13External.html" class="button">External -&gt;</a>
     <h6>12UsingStatic</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("call", origin);
+    });
+  </script>
 </body>
 </html>
 

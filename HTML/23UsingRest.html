@@ -44,6 +44,15 @@
     <a href="24WebAPI.html" class="button">WebAPI -&gt;</a>
     <h6>23UsingRest</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("useRest", origin);
+    });
+  </script>
 </body>
 </html>
 

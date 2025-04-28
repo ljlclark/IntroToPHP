@@ -40,5 +40,14 @@
     <a href="8Display.html" class="button">Encode() -&gt;</a>
     <h6>7EchoCmd</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("testEcho", origin);
+    });
+  </script>
 </body>
 </html>

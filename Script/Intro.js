@@ -18,3 +18,12 @@ function Encode(text)
   text = text.replace(/"/g, "&quot;");
   text = text.replace(/'/g, "&#039;");
 }
+
+function GetOrigin(origin)
+{
+  if ("null" == origin)
+  {
+    origin = "*";
+  }
+  return origin;
+}

@@ -54,5 +54,14 @@
     <a href="9EchoLine.html" class="button">Line() -&gt;</a>
     <h6>8Display</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("display", origin);
+    });
+  </script>
 </body>
 </html>
