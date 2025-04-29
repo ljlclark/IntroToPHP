@@ -19,110 +19,110 @@
   <div id="sidebar">
     <br />
     <div class="navGroup">PHP</div>
-    <div class="navItem" data-href="PHPMain.html">
+    <div id="home" class="navItem" data-href="PHPMain.html">
       Home
     </div>
-    <div class="navItem"
+    <div id="php" class="navItem"
          data-href="HTML\1PHP.html">
       PHP
     </div>
-    <div class="navItem"
+    <div id="file" class="navItem"
          data-href="HTML\2PHPFile.html">
       The PHP Code File
     </div>
-    <div class="navItem"
+    <div id="vars" class="navItem"
          data-href="HTML\3Variables.html">
       PHP Variables
     </div>
-    <div class="navItem"
+    <div id="strings" class="navItem"
          data-href="HTML\4Strings.html">
       PHP Strings
     </div>
-    <div class="navItem"
+    <div id="cmd" class="navItem"
          data-href="HTML\5CommandLine.html">
       Run a Program From the Command Line
     </div>
-    <div class="navItem"
+    <div id="echo" class="navItem"
          data-href="HTML\6Echo.html">
       The "echo" Statement
     </div>
-    <div class="navItem"
+    <div id="testEcho" class="navItem"
          data-href="HTML\7EchoCmd.html">
       The TestEcho Command File
     </div>
-    <div class="navItem"
+    <div id="display" class="navItem"
          data-href="HTML\8Display.html">
       A Display() PHP Function
     </div>
-    <div class="navItem"
+    <div id="line" class="navItem"
          data-href="HTML\9EchoLine.html">
       A Line() PHP Function
     </div>
-    <div class="navItem"
+    <div id="default" class="navItem"
          data-href="HTML\10DefaultParams.html">
       Default Parameters
     </div>
-    <div class="navItem"
+    <div id="static" class="navItem"
          data-href="HTML\11Static.html">
       Static Class Functions
     </div>
-    <div class="navItem"
+    <div id="call" class="navItem"
          data-href="HTML\12UsingStatic.html">
       Calling Static Class Functions
     </div>
-    <div class="navItem"
+    <div id="external" class="navItem"
          data-href="HTML\13External.html">
       External Code
     </div>
-    <div class="navItem"
+    <div id="class" class="navItem"
          data-href="HTML\14ClassMethods.html">
       Class Methods
     </div>
-    <div class="navItem"
+    <div id="begin" class="navItem"
          data-href="HTML\15HTMLBegin.html">
       HTML Begin Output Method
     </div>
-    <div class="navItem"
+    <div id="other" class="navItem"
          data-href="HTML\16HTMLBody.html">
       Other HTML Output Methods
     </div>
-    <div class="navItem"
+    <div id="testForm" class="navItem"
          data-href="HTML\17FormHTML.html">
       The the TestForm HTML File
     </div>
-    <div class="navItem"
+    <div id="createForm" class="navItem"
          data-href="HTML\18Form.html">
       Creating an HTML Form
     </div>
-    <div class="navItem"
+    <div id="cleaning" class="navItem"
          data-href="HTML\19Scrub.html">
       Cleaning the Data
     </div>
-    <div class="navItem"
+    <div id="useForm" class="navItem"
          data-href="HTML\20FormDataPHP.html">
       Program to Use the Form Data
     </div>
-    <div class="navItem"
+    <div id="enterData" class="navItem"
          data-href="HTML\21EnteringData.html">
       Entering the Form Data
     </div>
-    <div class="navItem"
+    <div id="retrieveRest" class="navItem"
          data-href="HTML\22RestService.html">
       Retrieving Data with REST
     </div>
-    <div class="navItem"
+    <div id="useRest" class="navItem"
          data-href="HTML\23UsingRest.html">
       Using the REST Web Service
     </div>
-    <div class="navItem"
+    <div id="webAPI" class="navItem"
          data-href="HTML\24WebAPI.html">
       A Very Simple WebAPI
     </div>
-    <div class="navItem"
+    <div id="fetch" class="navItem"
          data-href="HTML\25Fetch.html">
       Calling the Fetch() Method
     </div>
-    <div class="navItem"
+    <div id="usingFetch" class="navItem"
          data-href="HTML\26UsingFetch.html">
       Using the WebAPI with Fetch
     </div>
@@ -140,6 +140,24 @@
     const contentFrame = document.getElementById("contentFrame");
     const navEvents = new NavEvents(contentFrame);
     navEvents.AddEvents();
+
+    // Handle message.
+    window.addEventListener('message', function (event)
+    {
+      if (event.origin == window.origin)
+      {
+        if (navEvents.PrevNavItem != null)
+        {
+          // Resets to original value.
+          navEvents.PrevNavItem.style.backgroundColor = "";
+        }
+
+        // Get data from message.
+        let eItem = document.getElementById(event.data)
+        navEvents.PrevNavItem = eItem;
+        eItem.style.backgroundColor = "#d4dfff";
+      }
+    });
   </script>
 </body>
 </html>
